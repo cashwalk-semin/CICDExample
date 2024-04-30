@@ -14,6 +14,7 @@ import com.example.cicdexample.ui.theme.CICDExampleTheme
 
 class MainActivity : ComponentActivity() {
     val list = listOf("seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang")
+    val list2 = listOf("seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
