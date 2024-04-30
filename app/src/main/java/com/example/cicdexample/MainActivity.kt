@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.cicdexample.ui.theme.CICDExampleTheme
 
 class MainActivity : ComponentActivity() {
+    val list = listOf("seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang","seminzzang")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
