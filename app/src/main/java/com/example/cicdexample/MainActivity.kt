@@ -67,8 +67,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(
-    name: String,
+fun Greeting(name: String,
     modifier: Modifier = Modifier,
 ) {
     Text(
