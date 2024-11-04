@@ -10,6 +10,7 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 4
 
+ktlint_code_style = android_studio
 ktlint_standard = enable # Disable all rules from the `standard` rule set provided by KtLint
 ktlint_standard_final-newline = enable # Enables the `final-newline` rule in the `standard` rule set provided by KtLint
 ktlint_experimental = enable # Enable rules marked as experimental for all rule sets that are enabled
