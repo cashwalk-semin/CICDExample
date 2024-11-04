@@ -25,3 +25,7 @@ jobs:
               run: ./gradlew build
             - name: Run ktlint
               run: ./gradlew ktlintCheck
+            - name: Show ktlint Report
+              if: failure()
+              run: cat app/build/reports/ktlint/ktlintCheck.txt || echo "ktlint report not found" && false
+
