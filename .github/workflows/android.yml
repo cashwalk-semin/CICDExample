@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
 
 jobs:
+  name: Android CI
   build:
 
     runs-on: ubuntu-latest
