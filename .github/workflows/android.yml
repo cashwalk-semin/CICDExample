@@ -27,5 +27,5 @@ jobs:
               run: ./gradlew ktlintCheck
             - name: Show ktlint Report
               if: failure()
-              run: cat app/build/reports/ktlint/ktlintAndroidTestSourceSetCheck/ktlintAndroidTestSourceSetCheck.txt || echo "ktlint report not found" && false
+              run: cat app/build/reports/ktlint/ktlintMainSourceSetCheck/ktlintMainSourceSetCheck.txt
 

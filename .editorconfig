@@ -12,11 +12,11 @@ tab_width = 4
 
 ktlint_standard = enable # Disable all rules from the `standard` rule set provided by KtLint
 ktlint_standard_final-newline = enable # Enables the `final-newline` rule in the `standard` rule set provided by KtLint
+ktlint_standard_import-ordering = disabled
 ktlint_experimental = enable # Enable rules marked as experimental for all rule sets that are enabled
 ktlint_standard_some-experimental-rule = enable # Disables the (experimental) `some-experimental-rule` in the `standard` rule set provided by KtLint
 ktlint_custom-rule-set = enable # Enable all rules in the `custom-rule-set` rule set (not provided by KtLint)
 ktlint_custom-rule-set_custom-rule = enable # Disables the `custom-rule` rule in the `custom-rule-set` rule set (not provided by KtLint)
-ktlint_standard_import-ordering = disabled
 # java.* 패키지를 의존하는 경우  IntelliJ의 Orgarnize Import 기능으로는 알파벳 순서대로 import 구문을 정렬할 수 없다.
 # 이는 ktlint의 import-ordering 규칙과 맞지 않는다.
 [*.kt]
