@@ -51,6 +51,7 @@ class MainActivity : ComponentActivity() {
             "seminzzang",
             "seminzzang",
         )
+    val test = "seminzzang"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
