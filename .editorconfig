@@ -10,7 +10,10 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 4
 
-ktlint-standard = enabled
+ktlint_standard = disabled
+[*.kt]
+# ktlint_disabled_rules = wrapping, function-naming
+# ktlint_standard_argument-list-wrapping = disabled
 
 # ktlint_standard = enabled # Disable all rules from the `standard` rule set provided by KtLint
 # ktlint_standard_final-newline = enabled # Enables the `final-newline` rule in the `standard` rule set provided by KtLint
