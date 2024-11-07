@@ -11,6 +11,7 @@ max_line_length = 120
 tab_width = 4
 
 ktlint_standard = disabled
+ktlint_standard_function-naming = enabled
 [*.kt]
 # ktlint_disabled_rules = wrapping, function-naming
 # ktlint_standard_argument-list-wrapping = disabled
