@@ -45,7 +45,7 @@ jobs:
                     GOOGLE_APPLICATION_CREDENTIALS: firebase-service-account.json
                 run: |
                     firebase appdistribution:distribute \
-                    app/build/outputs/apk/release/app-release.apk \
+                    app/build/outputs/apk/debug/app-debug.apk \
                     --app ${{ secrets.FIREBASE_APP_ID }} \
                     --groups testers \
                     --release-notes "${{ github.event.inputs.release_notes }}"
