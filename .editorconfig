@@ -10,11 +10,21 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 4
 
-ktlint_standard = disable # Disable all rules from the `standard` rule set provided by KtLint
-ktlint_standard_final-newline = disable # Enables the `final-newline` rule in the `standard` rule set provided by KtLint
-ktlint_experimental = disable # Enable rules marked as experimental for all rule sets that are enabled
-ktlint_standard_some-experimental-rule = disable # Disables the (experimental) `some-experimental-rule` in the `standard` rule set provided by KtLint
-ktlint_custom-rule-set = disable # Enable all rules in the `custom-rule-set` rule set (not provided by KtLint)
-ktlint_custom-rule-set_custom-rule = disable # Disables the `custom-rule` rule in the `custom-rule-set` rule set (not provided by KtLint)
+ktlint_standard_function-naming = enabled
+ktlint_standard_wrapping = enabled
+[*.kt]
+# ktlint_disabled_rules = wrapping, function-naming
+# ktlint_standard_argument-list-wrapping = disabled
+
+# ktlint_standard = enabled # Disable all rules from the `standard` rule set provided by KtLint
+# ktlint_standard_final-newline = enabled # Enables the `final-newline` rule in the `standard` rule set provided by KtLint
+# ktlint_standard_import-ordering = disabled
+# ktlint_experimental = enabled # Enable rules marked as experimental for all rule sets that are enabled
+# ktlint_standard_some-experimental-rule = enabled # Disables the (experimental) `some-experimental-rule` in the `standard` rule set provided by KtLint
+# ktlint_custom-rule-set = enabled # Enable all rules in the `custom-rule-set` rule set (not provided by KtLint)
+# ktlint_custom-rule-set_custom-rule = enabled # Disables the `custom-rule` rule in the `custom-rule-set` rule set (not provided by KtLint)
 # java.* 패키지를 의존하는 경우  IntelliJ의 Orgarnize Import 기능으로는 알파벳 순서대로 import 구문을 정렬할 수 없다.
 # 이는 ktlint의 import-ordering 규칙과 맞지 않는다.
+# [*.kt]
+ktlint_standard_function-naming = disabled
+ktlint_standard_import-ordering = disabled
