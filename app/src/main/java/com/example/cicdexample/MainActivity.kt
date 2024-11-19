@@ -33,7 +33,8 @@ class MainActivity : ComponentActivity() {
             "seminzzang",
         )
     val list2 =
-        listOf("seminzzang",
+        listOf(
+            "seminzzang",
             "seminzzang",
             "seminzzang",
             "seminzzang",
