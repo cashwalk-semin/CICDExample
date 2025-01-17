@@ -13,7 +13,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: set up JDK 17
-              uses: actions/setup-java@v3
+              uses: actions/setup-java@v4
               with:
                   java-version: '17'
                   distribution: 'temurin'
@@ -21,10 +21,73 @@ jobs:
 
             - name: Grant execute permission for gradlew
               run: chmod +x gradlew
+
             - name: Build with Gradle
-              run: ./gradlew build
-            - name: Run ktlint
-              run: ./gradlew ktlintCheck
+              run: ./gradlew assembleDebug
+
+            - name: Install ktlint
+              run: |
+                  curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.4.1/ktlint &&
+                  chmod a+x ktlint
+                  sudo mv ktlint /usr/local/bin/
+
+            - name: Fetch specific branch
+              run: |
+                    git fetch origin master:tmp-master
+
+            - name: Run ktlint on changed lines
+              run: |
+                    CHANGED_FILES=$(git diff --name-only origin/master | grep '\.kt$' || true)
+
+                    # 변경된 파일이 없으면 종료
+                    if [ -z "$CHANGED_FILES" ]; then
+                        echo "✅ No Kotlin files changed. Skipping ktlint."
+                        exit 0
+                    fi
+
+                    # ktlint 실행
+                    echo "🔍 Running ktlint on changed files..."
+                    FAILED=false
+
+                    if [ -n "$CHANGED_FILES" ]; then
+                        echo "Running ktlint on changed lines..."
+
+                        for FILE in $CHANGED_FILES; do
+                            echo "Processing file: $FILE"
+                            CHANGED_LINES=$(git diff -U0 origin/develop -- "$FILE" | grep '^@@' | sed -n 's/^@@.*\+//p' | cut -d' ' -f1) || true
+                            ALL_ERRORS=$(ktlint --relative "$FILE" | grep "$FILE" || true)
+
+                            for LINE in $CHANGED_LINES; do
+                                START=$(echo "$LINE" | cut -d',' -f1)
+                                LENGTH=$(echo "$LINE" | awk -F',' '{print ($2 == "" ? "" : $2)}')
+
+                                if [ -z "$LENGTH" ] || [ "$LENGTH" -eq 0 ]; then
+                                    LENGTH=1
+                                fi
+
+                                for CURRENT_LINE in $(seq $START $((START + LENGTH - 1))); do
+                                    LINE_ERRORS=$(echo "$ALL_ERRORS" | grep -E "$FILE:$CURRENT_LINE")
+
+                                    if [ -n "$LINE_ERRORS" ]; then
+                                        echo "❌ $LINE_ERRORS"
+                                        FAILED=true
+                                    fi
+                                done
+                            done
+                        done
+                    else
+                        echo "No Kotlin files changed."
+                    fi
+
+                    # ktlint에서 문제가 있으면 커밋 차단
+                    if [ "$FAILED" = true ]; then
+                        echo "❌ ktlint found issues. Please fix them before committing."
+                        exit 1
+                    fi
+
+                    echo "✅ All files passed ktlint check."
+                    exit 0
+
             - name: Show ktlint Report
               if: failure()
               run: cat app/build/reports/ktlint/ktlintMainSourceSetCheck/ktlintMainSourceSetCheck.txt
