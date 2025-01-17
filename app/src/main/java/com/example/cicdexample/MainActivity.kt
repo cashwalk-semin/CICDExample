@@ -13,25 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.cicdexample.ui.theme.CICDExampleTheme
 
 class MainActivity : ComponentActivity() {
-    val list =
-        listOf(
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-            "seminzzang",
-        )
+    val list = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list2 =
         listOf(
             "seminzzang",
@@ -64,6 +46,7 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 }
 
 @Composable
@@ -75,6 +58,7 @@ fun Greeting(
         text = "Hello $name!!!!!!!!!!!!",
         modifier = modifier,
     )
+
 }
 
 @Preview(showBackground = true)
@@ -83,4 +67,5 @@ fun GreetingPreview() {
     CICDExampleTheme {
         Greeting("Android")
     }
+
 }
