@@ -14,8 +14,12 @@ import com.example.cicdexample.ui.theme.CICDExampleTheme
 
 class MainActivity : ComponentActivity() {
     val list = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list2 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list3 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list4 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list5 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list6 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list7 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list999 =
         listOf(
             "seminzzang",
