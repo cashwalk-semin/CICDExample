@@ -37,9 +37,7 @@ jobs:
 
             - name: Run ktlint on changed lines
               run: |
-                    CHANGED_FILES2=$(git diff --name-only origin/master)
-                    echo "$CHANGED_FILES2"
-                    CHANGED_FILES=$(git diff --name-only origin/master | grep '\.kt$' || true)
+                    CHANGED_FILES=$(git diff --name-only tmp-master | grep '\.kt$' || true)
                     echo "$CHANGED_FILES"
 
                     # 변경된 파일이 없으면 종료
