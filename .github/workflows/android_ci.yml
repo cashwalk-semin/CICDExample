@@ -40,11 +40,11 @@ jobs:
                     CHANGED_FILES=$(git diff --name-only tmp-master | grep '\.kt$' || true)
                     echo "$CHANGED_FILES"
 
-                    # 변경된 파일이 없으면 종료
-                    if [ -z "$CHANGED_FILES" ]; then
-                        echo "✅ No Kotlin files changed. Skipping ktlint."
-                        exit 0
-                    fi
+#                    # 변경된 파일이 없으면 종료
+#                    if [ -z "$CHANGED_FILES" ]; then
+#                        echo "✅ No Kotlin files changed. Skipping ktlint."
+#                        exit 0
+#                    fi
 
                     # ktlint 실행
                     echo "🔍 Running ktlint on changed files..."
