@@ -56,7 +56,7 @@ jobs:
 
                         for FILE in $CHANGED_FILES; do
                             echo "Processing file: $FILE"
-                            CHANGED_LINES=$(git diff -U0 origin/master -- "$FILE" | grep '^@@' | sed -n 's/^@@.*\+//p' | cut -d' ' -f1) || true
+                            CHANGED_LINES=$(git diff -U0 origin/master -- "$FILE" | grep '^@@' | sed -n 's/^@@.*\\+//p' | cut -d' ' -f1) || true
                             CHANGED_FILES2=$(git diff -U0 origin/master -- "$FILE") || true
                             echo "Changed Files in FILE:"
                             echo "$CHANGED_FILES2"
