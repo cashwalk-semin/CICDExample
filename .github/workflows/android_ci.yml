@@ -56,8 +56,8 @@ jobs:
 
                         for FILE in $CHANGED_FILES; do
                             echo "Processing file: $FILE"
-                            CHANGED_LINES=$(git diff -U0 tmp-master -- "$FILE" | grep '^@@' | sed -n 's/^@@.*\+//p' | cut -d' ' -f1) || true
-                            CHANGED_FILES2=$(git diff -U0 tmp-master -- "$FILE")
+                            CHANGED_LINES=$(git diff -U0 origin master -- "$FILE" | grep '^@@' | sed -n 's/^@@.*\+//p' | cut -d' ' -f1) || true
+                            CHANGED_FILES2=$(git diff -U0 origin master -- "$FILE") || true
                             echo "Changed Files in FILE:"
                             echo "$CHANGED_LINES2"
                             ALL_ERRORS=$(ktlint --relative "$FILE" | grep "$FILE" || true)
