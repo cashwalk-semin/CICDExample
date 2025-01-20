@@ -60,6 +60,8 @@ jobs:
                             CHANGED_FILES2=$(git diff -U0 origin/master -- "$FILE") || true
                             echo "Changed Files in FILE:"
                             echo "$CHANGED_FILES2"
+                            echo "Changed Lines:"
+                            echo "$CHANGED_LINES"
                             ALL_ERRORS=$(ktlint --relative "$FILE" | grep "$FILE" || true)
 
                             for LINE in $CHANGED_LINES; do
