@@ -30,6 +30,23 @@ class MainActivity : ComponentActivity() {
     val list15 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list16 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list17 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list18 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list19 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list20 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list21 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list22 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list23 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list24 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list25 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list26 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list27 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list28 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list29 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list30 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list31 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list32 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list33 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
+    val list34 = listOf("seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang", "seminzzang",)
     val list999 =
         listOf(
             "seminzzang",
@@ -54,13 +71,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CICDExampleTheme {
+                    CICDExampleTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     Greeting("Android")
                 }
             }
-        }
+}
     }
 
 }
@@ -72,16 +89,11 @@ fun Greeting(
 ) {
     Text(
         text = "Hello $name!!!!!!!!!!!!",
-        modifier = modifier,
+        modifier = modifier
     )
 
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    CICDExampleTheme {
-        Greeting("Android")
-    }
-
-}
+fun GreetingPreview() { CICDExampleTheme { Greeting("Android") } }
